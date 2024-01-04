@@ -60,7 +60,7 @@
       state: present 
 
   - name: get the categories count
-    ansible.builtin.command: .command: mongo --host mongodb.nkvj.cloud --quiet --eval 'db = db.getSiblingDB("catalogue"); db.produc
+    ansible.builtin.command: mongo --host mongodb.nkvj.cloud --quiet --eval 'db = db.getSiblingDB("catalogue"); db.products.count()'
     register: product_count
 
   # - name: print the count

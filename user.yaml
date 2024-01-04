@@ -31,8 +31,9 @@
 
   - name: extract user application
     ansible.builtin.unarchive:
-    dest: /app
-    remote_src: yes
+      src: /tmp/user.zip
+      dest: /app
+      remote_src: yes
 
   - name: Install dependincies    
     ansible.builtin.command: npm install
